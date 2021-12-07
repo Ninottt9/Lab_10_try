@@ -5,11 +5,13 @@
 class Point
 {
 private:
+    int _id;
+
     double _x;
     double _y;
     std :: string _city;
 
-    Point(double x, double y) : Point{"", x, y} {}
+    Point(double x, double y) : Point{"Punkt X", x, y} {}
 public:
     Point() : Point{0, 0} {}
     Point(std :: string city, double x, double y);
@@ -27,7 +29,7 @@ public:
 int Point :: number {0};
 
 inline Point :: Point(std :: string city, double x, double y)
-    :   _x{x}, _y{y}, _city{city} { ++number; }
+    :   _x{x}, _y{y}, _city{city}, _id{++number} {}
 
 inline Point Point :: setPoint(double x, double y)
 { return Point(x,y); }
