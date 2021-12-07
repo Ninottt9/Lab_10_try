@@ -49,7 +49,7 @@ int main() {
   noname1.fullPrint();
   noname2.fullPrint();
 
-  /*noname1.changeName("Wola Batorska");
+  noname1.changeName("Wola Batorska");
   noname1.fullPrint();
   Point batorska = noname1;
   batorska.fullPrint();
@@ -62,7 +62,7 @@ int main() {
 
   Point kopia = std::move(pusty.newMoved("Nowe Miasto",-50,-30));
   kopia.fullPrint();
-  std::move(Point::setContrary(x,y)).fullPrint();*/
+  std::move(Point::setContrary(x,y)).fullPrint();
   // const Point nowy2(std::move(Point::setContrary(x,y)));
   // nowy2.fullPrint();
 

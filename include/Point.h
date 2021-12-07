@@ -10,11 +10,8 @@ private:
     double _y;
     int _id;
 
-    Point(double x, double y) : Point{"Punkt X", x, y} {}
+    Point(double x, double y) : Point{"", x, y} {}
 public:
-    static int number;
-
-
     Point() : Point{0, 0} {}
     Point(std :: string city, double x, double y);
 
@@ -48,6 +45,8 @@ public:
     void fullPrint() const;
     void changeName(std :: string new_name);
     Point newMoved(std :: string new_name, double x, double y);
+
+    static int number;
 };
 
 inline int Point :: number {0};
@@ -56,10 +55,10 @@ inline Point :: Point(std :: string city, double x, double y)
     : _city{city}, _x{x}, _y{y}, _id{++number} {}
 
 inline Point Point :: setPoint(double x, double y)
-{ return Point(x,y); }
+{ return Point("Punkt X", x, y); }
 
 inline Point Point :: setContrary(double x, double y)
-{ return Point(-x,-y); }
+{ return Point("Punkt X", -x,-y); }
 
 inline void Point :: changeName(std :: string new_name)
 { _city = new_name; }
@@ -75,3 +74,8 @@ inline Point :: ~Point()
 }
 
 #endif
+
+/*#ifndef EKSTRA
+#define EKSTRA
+
+#endif*/
